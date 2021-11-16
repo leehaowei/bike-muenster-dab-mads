@@ -15,8 +15,8 @@ cols = ['temperature', 'humidity', 'rain_mm', 'rain_day', 'h_0', 'h_1', 'h_2',
 @app.route('/', methods=['GET', 'POST'])
 def predict_bike():
     # import model and scaler
-    rf_model = load('model.joblib')
-    sc = load('std_scaler.joblib')
+    rf_model = load('app/model.joblib')
+    sc = load('app/std_scaler.joblib')
 
     request_type_str = request.method
     if request_type_str == 'GET':
